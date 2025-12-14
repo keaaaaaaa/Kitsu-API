@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitsu - Anime Discovery Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">🎌 Kitsu</h1>
+                <p class="tagline">Discover Your Next Favorite Anime</p>
+            </div>
+        </header>
+
+        <!-- Search and Filter Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search anime by title..."
+                >
+                <button id="searchBtn" class="search-btn">Search</button>
+            </div>
+
+            <div class="filter-container">
+                <select id="statusFilter" class="filter-select">
+                    <option value="">All Status</option>
+                    <option value="current">Currently Airing</option>
+                    <option value="finished">Finished Airing</option>
+                    <option value="upcoming">Upcoming</option>
+                </select>
+
+                <select id="ratingFilter" class="filter-select">
+                    <option value="">All Ratings</option>
+                    <option value="G">G - All Ages</option>
+                    <option value="PG">PG - Children</option>
+                    <option value="PG13">PG-13 - Teens 13+</option>
+                    <option value="R">R - 17+</option>
+                    <option value="R18">R18+ - Adults</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Loading Indicator -->
+        <div id="loadingIndicator" class="loading">
+            <div class="spinner"></div>
+            <p>Loading anime...</p>
+        </div>
+
+        <!-- Anime Grid -->
+        <section class="anime-grid" id="animeGrid">
+            <!-- Anime cards will be inserted here -->
+        </section>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination">
+            <button id="prevBtn" class="pagination-btn">← Previous</button>
+            <span id="pageInfo" class="page-info">Page 1</span>
+            <button id="nextBtn" class="pagination-btn">Next →</button>
+        </div>
+    </div>
+
+    <!-- Modal for Anime Details -->
+    <div id="animeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
