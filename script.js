@@ -237,8 +237,7 @@ class KitsuAnimePlatform {
             rating: this.ratingFilter.value
         };
         this.currentPage = 1;
-        this.applyFilters();
-        this.displayAnime();
+        this.loadAnime();
     }
 
     updatePagination() {
